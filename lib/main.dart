@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:theflutterlab_workshop/home_page.dart';
 
 void main() {
   runApp(const MoonApp());
@@ -12,14 +13,7 @@ class MoonApp extends StatelessWidget {
     return MaterialApp(
       title: 'Moon App',
       theme: ThemeData.dark(),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Moon App'),
-        ),
-        body: const Center(
-          child: Text('Hello Moon!\n- From Earth', style: TextStyle(fontSize: 30),),
-        ),
-      ),
+      home: const HomeScreen(),
     );
   }
 }
