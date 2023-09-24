@@ -11,6 +11,7 @@ class MoonApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Moon App',
+      theme: ThemeData.dark(),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Moon App'),
