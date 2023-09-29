@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:theflutterlab_workshop/detail_page.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -29,25 +30,33 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               Stack(
+                alignment: Alignment.center,
                 children: [
                   Image.asset(
                     'assets/moon.png',
                     alignment: Alignment.bottomCenter,
+                    height: 300,
                   ),
                   Positioned(
-                    top: -50,
-                    child: Image.asset(
-                      'assets/vikram.png',
+                    top: -32,
+                    child: Hero(
+                      tag: 'vikram',
+                      child: Image.asset(
+                        'assets/vikram.png',
+                        height: 150,
+                        width: 150,
+                      ),
                     ),
                   ),
                 ],
               ), // Moon Image
-              const SizedBox(height: 50),
+              const SizedBox(height: 30),
               IconButton(
-                onPressed: () {
-                  //
-                },
                 iconSize: 40,
+                onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => const DetailPage()));
+                },
                 icon: const Icon(Icons.arrow_forward),
               )
             ],
